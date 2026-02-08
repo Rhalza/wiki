@@ -1,0 +1,18 @@
+[
+  {
+    "id": "001",
+    "title": "Welcome to the Wiki",
+    "filename": "welcome",
+    "summary": "Introduction and purpose of this personal knowledge base.",
+    "tags": ["meta", "intro"],
+    "date": "2026-02-08"
+  },
+  {
+    "id": "002",
+    "title": "Server Configuration",
+    "filename": "server-config",
+    "summary": "Notes on Nginx and reverse proxy setups.",
+    "tags": ["devops", "linux"],
+    "date": "2026-02-08"
+  }
+]
