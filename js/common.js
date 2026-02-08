@@ -1,72 +1,69 @@
 const WIKI_CONFIG = {
-    // Helper to get correct path regardless of current depth
-    getPath: (path) => {
-        const depth = window.location.pathname.split('/').length - 2; 
-        const prefix = depth > 0 ? '../'.repeat(depth) : '';
-        return prefix + path;
-    },
-    articlesPath: 'json/articles.json',
-    contactEmail: 'rhalza.wiki@gmail.com'
+    articlesPath: '../json/articles.json', 
+    articleRoot: '../article/',
+    homeRoot: '../',
+    email: 'rhalza.wiki@gmail.com'
 };
 
-/* --- Global Init --- */
-document.addEventListener('DOMContentLoaded', () => {
-    initFAB();
-});
+const isHome = window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/');
 
-/* --- Floating Action Button Logic --- */
-function initFAB() {
-    const fabContainer = document.querySelector('.fab-container');
-    const fabMain = document.querySelector('.fab-main');
-    
-    if(!fabContainer || !fabMain) return;
-
-    // Toggle Menu
-    fabMain.addEventListener('click', (e) => {
-        e.stopPropagation();
-        fabContainer.classList.toggle('active');
-    });
-
-    // Close when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!fabContainer.contains(e.target)) {
-            fabContainer.classList.remove('active');
-        }
-    });
-
-    // Setup Mail Links
-    const btnCorrection = document.getElementById('mail-correction');
-    const btnSuggestion = document.getElementById('mail-suggestion');
-    const btnSubmission = document.getElementById('mail-submission');
-
-    if(btnCorrection) btnCorrection.addEventListener('click', () => sendMail('correction'));
-    if(btnSuggestion) btnSuggestion.addEventListener('click', () => sendMail('suggestion'));
-    if(btnSubmission) btnSubmission.addEventListener('click', () => sendMail('submission'));
+if (isHome) {
+    WIKI_CONFIG.articlesPath = 'json/articles.json';
+    WIKI_CONFIG.articleRoot = 'article/';
+    WIKI_CONFIG.homeRoot = '';
 }
 
-function sendMail(type) {
-    let subject = "";
-    let body = "";
-    
-    // Determine Page Name
-    const path = window.location.pathname;
-    const pageName = path.substring(path.lastIndexOf('/') + 1).replace('.html', '').replace(/_/g, ' ');
-    const isArticle = path.includes('/article/');
-
-    switch(type) {
-        case 'correction':
-            subject = isArticle ? `Correction: ${pageName}` : `Wiki Correction`;
-            body = "Please describe the error or missing data:\n\n";
-            break;
-        case 'suggestion':
-            subject = "Article Suggestion";
-            body = "Proposed Title:\n\nDescription of topic:\n\n";
-            break;
-        case 'submission':
-            subject = "Article Submission";
-            body = "Attached is a concept for a new article.\n\nTopic:\n\n";
-            break;
+async function fetchArticles() {
+    try {
+        const response = await fetch(WIKI_CONFIG.articlesPath);
+        if (!response.ok) throw new Error('Response error');
+        return await response.json();
+    } catch (error) {
+        return [];
     }
-
-    window.location.href = `mailto:${WIKI_CONFIG.contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const fabBtn = document.getElementById('fab-main');
+    const fabMenu = document.getElementById('fab-menu');
+    const fabIcon = document.getElementById('fab-icon');
+    
+    if (fabBtn && fabMenu) {
+        fabBtn.addEventListener('click', () => {
+            const isActive = fabMenu.classList.contains('active');
+            
+            if (isActive) {
+                fabMenu.classList.remove('active');
+                fabIcon.textContent = '✉'; 
+            } else {
+                fabMenu.classList.add('active');
+                fabIcon.textContent = '×'; 
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!fabBtn.contains(e.target) && !fabMenu.contains(e.target)) {
+                fabMenu.classList.remove('active');
+                fabIcon.textContent = '✉';
+            }
+        });
+
+        const articleTitleEl = document.querySelector('.article-title');
+        const pageTitle = articleTitleEl ? articleTitleEl.textContent : 'General';
+
+        document.getElementById('opt-correct').addEventListener('click', () => {
+            const subject = articleTitleEl 
+                ? `Correction Request: ${pageTitle}` 
+                : `Correction Request`;
+            window.location.href = `mailto:${WIKI_CONFIG.email}?subject=${encodeURIComponent(subject)}&body=Describe the error:`;
+        });
+
+        document.getElementById('opt-suggest').addEventListener('click', () => {
+            window.location.href = `mailto:${WIKI_CONFIG.email}?subject=Article Suggestion&body=Suggested Topic:`;
+        });
+
+        document.getElementById('opt-submit').addEventListener('click', () => {
+            window.location.href = `mailto:${WIKI_CONFIG.email}?subject=Article Submission&body=Attached or Inline Concept:`;
+        });
+    }
+});
