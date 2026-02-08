@@ -326,5 +326,85 @@
     "summary": "A region in Northern California that serves as a global center for high technology and innovation.",
     "tags": ["geography", "technology", "economy"],
     "date": "2026-02-09"
+  },
+  {
+    "id": "042",
+    "title": "Republic of Florence",
+    "filename": "Republic_of_Florence",
+    "summary": "A medieval and early modern state that was centered on the Italian city of Florence in Tuscany.",
+    "tags": ["history", "italy", "europe"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "043",
+    "title": "Portugal",
+    "filename": "Portugal",
+    "summary": "A country on the Iberian Peninsula in southwestern Europe.",
+    "tags": ["geography", "country", "europe"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "044",
+    "title": "Brazil",
+    "filename": "Brazil",
+    "summary": "The largest country in South America and Latin America.",
+    "tags": ["geography", "country", "south america"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "045",
+    "title": "West Indies",
+    "filename": "West_Indies",
+    "summary": "A subregion of North America, surrounded by the North Atlantic Ocean and the Caribbean Sea.",
+    "tags": ["geography", "region", "caribbean"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "046",
+    "title": "Asia",
+    "filename": "Asia",
+    "summary": "Earth's largest and most populous continent, located primarily in the Eastern and Northern Hemispheres.",
+    "tags": ["geography", "continent"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "047",
+    "title": "Christopher Columbus",
+    "filename": "Christopher_Columbus",
+    "summary": "An Italian explorer and navigator who completed four voyages across the Atlantic Ocean.",
+    "tags": ["history", "biography", "explorer"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "048",
+    "title": "Medici Family",
+    "filename": "Medici_Family",
+    "summary": "An Italian banking family and political dynasty that gathered prominence under Cosimo de' Medici.",
+    "tags": ["history", "italy", "finance"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "049",
+    "title": "Seville",
+    "filename": "Seville",
+    "summary": "The capital and largest city of the Spanish autonomous community of Andalusia.",
+    "tags": ["geography", "city", "spain"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "050",
+    "title": "Amazon River",
+    "filename": "Amazon_River",
+    "summary": "The largest river by discharge volume of water in the world.",
+    "tags": ["geography", "river", "south america"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "051",
+    "title": "Gerardus Mercator",
+    "filename": "Gerardus_Mercator",
+    "summary": "A 16th-century geographer, cosmographer and cartographer from the County of Flanders.",
+    "tags": ["history", "biography", "cartography"],
+    "date": "2026-02-09"
   }
 ]
