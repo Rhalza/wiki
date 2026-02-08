@@ -8,106 +8,81 @@
     <link rel="stylesheet" href="../css/article.css">
 </head>
 <body>
-    <div class="layout-wrapper">
-        <header>
-            <div class="header-inner">
-                <a href="../index.html" class="site-logo">
-                    <img src="../media/images/site/logo1.png" alt="Orion Wiki">
-                </a>
-                
-                <div class="search-wrapper">
-                    <input type="text" id="wiki-search" placeholder="Search Orion..." autocomplete="off">
-                    <div id="search-results"></div>
-                </div>
+    <header>
+        <div class="header-inner">
+            <a href="../index.html" class="site-logo">
+                <img src="../media/images/site/logo1.png" alt="Orion">
+            </a>
+            
+            <div class="search-wrapper">
+                <input type="text" id="wiki-search" placeholder="Search Orion..." autocomplete="off">
+                <div id="search-results"></div>
             </div>
-        </header>
+        </div>
+    </header>
 
-        <main>
-            <div class="article-container">
-                <!-- Main Text Content -->
-                <article class="article-content">
+    <div class="layout-wrapper">
+        <main class="article-container">
+            <article>
+                <div class="article-header">
                     <h1 class="article-title">Orion (Wiki)</h1>
-                    <div class="article-meta">From Orion, the free encyclopedia</div>
+                    <div class="article-meta">Last Modified: February 8, 2026</div>
+                </div>
 
-                    <p>
-                        <b>Orion</b> is a personal wiki project and general knowledge repository created and maintained by Rhalza. 
-                        Unlike traditional development logs or technical blogs, Orion aims to structure information in an encyclopedic format, 
-                        providing a persistent and organized database for a wide variety of subjects.
-                    </p>
-
-                    <p>
-                        The project is hosted on GitHub Pages and utilizes a custom static site structure, eschewing heavy content management systems 
-                        in favor of raw HTML, CSS, and JavaScript for maximum control over layout and performance.
-                    </p>
-
-                    <h2>History and Purpose</h2>
-                    <p>
-                        Founded in 2023, the wiki was established to consolidate scattered notes, documentation, and research into a single, searchable platform. 
-                        The name "Orion" references the constellation, symbolizing a collection of distinct points of light forming a recognizable whole.
-                    </p>
-                    
-                    <h3>Development</h3>
-                    <p>
-                        The infrastructure of Orion is built to mimic the visual language of major wiki farms (such as Fandom or Miraheze) 
-                        while maintaining a distinct, dark-mode-first aesthetic known as the "Cold Slate" theme.
-                    </p>
-
-                    <h2>About the Creator</h2>
-                    <p>
-                        <b>Rhalza</b> (real name <b>Shane</b>) is the 28-year-old creator and administrator of the Orion project. 
-                        He serves as the primary contributor and editor-in-chief of the content within the repository.
-                    </p>
-
-                </article>
-
-                <!-- Infobox Sidebar -->
-                <aside>
+                <div class="article-body">
                     <div class="infobox">
                         <div class="infobox-header">Orion</div>
                         <div class="infobox-image">
-                            <!-- Placeholder for actual image -->
-                            <img src="../media/images/site/logo1.png" alt="Orion Logo" style="max-width: 150px;">
+                            <img src="../media/images/site/logo1.png" alt="Orion Logo">
                         </div>
                         <div class="infobox-row">
-                            <div class="infobox-label">Type</div>
-                            <div class="infobox-data">Personal Wiki</div>
-                        </div>
-                        <div class="infobox-row">
-                            <div class="infobox-label">Owner</div>
-                            <div class="infobox-data">Rhalza (Shane)</div>
+                            <div class="infobox-label">Founder</div>
+                            <div class="infobox-data">Shane (Rhalza)</div>
                         </div>
                         <div class="infobox-row">
                             <div class="infobox-label">Founded</div>
-                            <div class="infobox-data">2023</div>
+                            <div class="infobox-data">February 8, 2026</div>
+                        </div>
+                        <div class="infobox-row">
+                            <div class="infobox-label">Type</div>
+                            <div class="infobox-data">General Knowledge</div>
                         </div>
                         <div class="infobox-row">
                             <div class="infobox-label">Status</div>
-                            <div class="infobox-data">Active</div>
-                        </div>
-                        <div class="infobox-row">
-                            <div class="infobox-label">License</div>
-                            <div class="infobox-data">Proprietary</div>
-                        </div>
-                        <div class="infobox-row">
-                            <div class="infobox-label">Platform</div>
-                            <div class="infobox-data">GitHub Pages</div>
+                            <div class="infobox-data" style="color: #818cf8;">Active</div>
                         </div>
                     </div>
-                </aside>
-            </div>
-        </main>
 
-        <!-- Floating Action Button -->
-        <div class="fab-container">
-            <div class="fab-menu">
-                <div class="fab-item" id="mail-correction">Correction</div>
-                <div class="fab-item" id="mail-suggestion">Suggestion</div>
-                <div class="fab-item" id="mail-submission">Submission</div>
-            </div>
-            <div class="fab-main" title="Contact / Contribute">
-                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-            </div>
+                    <p><b>Orion</b> is a privately hosted, public-facing encyclopedia project established in 2026. Unlike specific technical documentation repositories, Orion is designed as a general knowledge base, structured similarly to traditional encyclopedias such as Wikipedia or Fandom.</p>
+
+                    <h2>History</h2>
+                    <p>The project was founded on February 8, 2026, by Shane, known online as <b>Rhalza</b>. The wiki was created to serve as a structured repository for information that extends beyond software development logs, encompassing a wide range of topics of interest to the creator.</p>
+
+                    <h2>Administration</h2>
+                    <p>The site is currently maintained by a single administrator:</p>
+                    <ul>
+                        <li><b>Name:</b> Shane</li>
+                        <li><b>Alias:</b> Rhalza</li>
+                        <li><b>Age:</b> 28</li>
+                        <li><b>Role:</b> Founder & Lead Editor</li>
+                    </ul>
+
+                    <h2>Technical Structure</h2>
+                    <p>Orion is built as a static site hosted on GitHub Pages. It utilizes a custom monochrome design language featuring cold slate and purple tones, prioritizing readability and a clean, rectangular user interface over modern rounded aesthetics.</p>
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <div class="fab-container">
+        <div id="fab-menu" class="fab-menu">
+            <button id="opt-correct" class="fab-item">Correction</button>
+            <button id="opt-suggest" class="fab-item">Suggestion</button>
+            <button id="opt-submit" class="fab-item">Submission</button>
         </div>
+        <button id="fab-main" class="fab-button">
+            <span id="fab-icon">✉</span>
+        </button>
     </div>
 
     <script src="../js/common.js"></script>
