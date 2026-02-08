@@ -1,10 +1,10 @@
 [
   {
-    "id": "meta-001",
+    "id": "001",
     "title": "Orion (Wiki)",
     "filename": "Orion_(Wiki)",
-    "summary": "Meta-documentation regarding the Orion wiki.",
-    "tags": ["meta", "about", "rhalza", "site", "website"],
+    "summary": "The main project page for the Orion general knowledge encyclopedia.",
+    "tags": ["meta", "project", "wiki"],
     "date": "2026-02-09"
   }
 ]
