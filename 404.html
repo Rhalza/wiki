@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found - Orion</title>
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+        .error-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: calc(100vh - var(--header-height));
+            padding: 2rem;
+        }
+
+        .error-code {
+            font-size: 6rem;
+            font-weight: 700;
+            color: var(--border-main);
+            font-family: var(--font-ui);
+            line-height: 1;
+        }
+
+        .error-title {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: var(--text-main);
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .error-message {
+            color: var(--text-muted);
+            max-width: 500px;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+        
+        .error-message a {
+            font-weight: 600;
+        }
+
+        .home-button {
+            display: inline-block;
+            background-color: var(--accent-primary);
+            color: var(--bg-body);
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background-color 0.2s ease;
+        }
+
+        .home-button:hover {
+            background-color: var(--accent-hover);
+            text-decoration: none;
+        }
+
+        /* Simplified header for 404 page */
+        header .header-inner {
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="layout-wrapper">
+        <header>
+            <div class="header-inner">
+                <a href="/wiki/" class="site-logo">
+                    <img src="media/images/site/logo1.png" alt="Orion">
+                </a>
+            </div>
+        </header>
+
+        <main>
+            <div class="error-container">
+                <div class="error-code">404</div>
+                <h1 class="error-title">Page Not Found</h1>
+                <p class="error-message">
+                    The article you are looking for does not exist. As the Orion Wiki is a manually curated project, many articles are still pending creation. Please be patient.
+                    <br><br>
+                    If you would like to suggest this page or submit a concept, you can send an email to <a href="mailto:rhalza.wiki@gmail.com">rhalza.wiki@gmail.com</a>.
+                </p>
+                <a href="/wiki/" class="home-button">Return to Main Page</a>
+            </div>
+        </main>
+    </div>
+
+    <div class="fab-container">
+        <div id="fab-menu" class="fab-menu">
+            <button id="opt-correct" class="fab-item">Correction</button>
+            <button id="opt-suggest" class="fab-item">Suggestion</button>
+            <button id="opt-submit" class="fab-item">Submission</button>
+        </div>
+        <button id="fab-main" class="fab-button">
+            <span id="fab-icon">✉</span>
+        </button>
+    </div>
+
+    <script src="js/common.js"></script>
+</body>
+</html>
