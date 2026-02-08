@@ -14,5 +14,317 @@
     "summary": "A country primarily located in North America, comprising 50 states, a federal district, and several territories.",
     "tags": ["geography", "country", "history", "north america"],
     "date": "2026-02-09"
+  },
+  {
+    "id": "003",
+    "title": "Amerigo Vespucci",
+    "filename": "Amerigo_Vespucci",
+    "summary": "Italian explorer and cartographer whose name was given to the American continents.",
+    "tags": ["history", "biography", "explorer"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "004",
+    "title": "Washington, D.C.",
+    "filename": "Washington_DC",
+    "summary": "The capital city and federal district of the United States.",
+    "tags": ["geography", "city", "capital"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "005",
+    "title": "New York City",
+    "filename": "New_York_City",
+    "summary": "The most populous city in the United States and a global financial center.",
+    "tags": ["geography", "city", "finance"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "006",
+    "title": "North America",
+    "filename": "North_America",
+    "summary": "A continent in the Northern Hemisphere and almost entirely within the Western Hemisphere.",
+    "tags": ["geography", "continent"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "007",
+    "title": "Martin Waldseemüller",
+    "filename": "Martin_Waldseemuller",
+    "summary": "German cartographer known for the 1507 map that first used the name America.",
+    "tags": ["history", "biography", "cartography"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "008",
+    "title": "Spanish People",
+    "filename": "Spanish_People",
+    "summary": "An ethnic group and nation native to Spain, who colonized parts of the Americas.",
+    "tags": ["ethnicity", "history", "europe"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "009",
+    "title": "Florida",
+    "filename": "Florida",
+    "summary": "A state in the Southeastern region of the United States.",
+    "tags": ["geography", "state", "usa"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "010",
+    "title": "French People",
+    "filename": "French_People",
+    "summary": "An ethnic group and nation native to France, significant in early American colonization.",
+    "tags": ["ethnicity", "history", "europe"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "011",
+    "title": "Mississippi River",
+    "filename": "Mississippi_River",
+    "summary": "The second-longest river and chief river of the second-largest drainage system on the North American continent.",
+    "tags": ["geography", "river", "nature"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "012",
+    "title": "East Coast (USA)",
+    "filename": "East_Coast",
+    "summary": "The coastline along which the Eastern United States meets the North Atlantic Ocean.",
+    "tags": ["geography", "region", "usa"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "013",
+    "title": "English People",
+    "filename": "English_People",
+    "summary": "An ethnic group and nation native to England, who established the Thirteen Colonies.",
+    "tags": ["ethnicity", "history", "europe"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "014",
+    "title": "Thirteen Colonies",
+    "filename": "Thirteen_Colonies",
+    "summary": "A group of British colonies on the Atlantic coast of North America that declared independence in 1776.",
+    "tags": ["history", "colonial", "usa"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "015",
+    "title": "Great Britain",
+    "filename": "Great_Britain",
+    "summary": "An island situated off the north-western coast of continental Europe.",
+    "tags": ["geography", "island", "europe"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "016",
+    "title": "American Revolutionary War",
+    "filename": "American_Revolutionary_War",
+    "summary": "An armed conflict between Great Britain and thirteen of its North American colonies.",
+    "tags": ["history", "war", "usa"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "017",
+    "title": "Constitution of the United States",
+    "filename": "Constitution_of_the_United_States",
+    "summary": "The supreme law of the United States of America.",
+    "tags": ["law", "government", "history"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "018",
+    "title": "Louisiana Purchase",
+    "filename": "Louisiana_Purchase",
+    "summary": "The acquisition of the territory of Louisiana by the United States from France in 1803.",
+    "tags": ["history", "expansion", "usa"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "019",
+    "title": "American Civil War",
+    "filename": "American_Civil_War",
+    "summary": "A civil war in the United States between the Union and the Confederacy.",
+    "tags": ["history", "war", "usa"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "020",
+    "title": "Union (American Civil War)",
+    "filename": "Union_States",
+    "summary": "The term used to refer to the United States of America during the American Civil War.",
+    "tags": ["history", "usa", "civil war"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "021",
+    "title": "Confederate States of America",
+    "filename": "Confederate_States",
+    "summary": "An unrecognized breakaway republic in the Southern United States during the Civil War.",
+    "tags": ["history", "civil war"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "022",
+    "title": "Transcontinental Railroad",
+    "filename": "Transcontinental_Railroad",
+    "summary": "A contiguous railroad line constructed between 1863 and 1869 across the western United States.",
+    "tags": ["history", "infrastructure", "railroad"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "023",
+    "title": "World War I",
+    "filename": "World_War_I",
+    "summary": "A global conflict originating in Europe that lasted from 1914 to 1918.",
+    "tags": ["history", "war", "global"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "024",
+    "title": "Roaring Twenties",
+    "filename": "Roaring_Twenties",
+    "summary": "A period of economic prosperity and cultural edge in the 1920s.",
+    "tags": ["history", "culture", "economics"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "025",
+    "title": "Great Depression",
+    "filename": "Great_Depression",
+    "summary": "A severe worldwide economic depression that took place mostly during the 1930s.",
+    "tags": ["history", "economics"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "026",
+    "title": "World War II",
+    "filename": "World_War_II",
+    "summary": "A global war that lasted from 1939 to 1945.",
+    "tags": ["history", "war", "global"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "027",
+    "title": "Pearl Harbor",
+    "filename": "Pearl_Harbor",
+    "summary": "A surprise military strike by the Imperial Japanese Navy Air Service upon the United States.",
+    "tags": ["history", "military", "ww2"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "028",
+    "title": "Cold War",
+    "filename": "Cold_War",
+    "summary": "A period of geopolitical tension between the United States and the Soviet Union.",
+    "tags": ["history", "politics", "global"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "029",
+    "title": "Soviet Union",
+    "filename": "Soviet_Union",
+    "summary": "A socialist state that spanned much of Eurasia from 1922 to 1991.",
+    "tags": ["history", "country", "politics"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "030",
+    "title": "Space Race",
+    "filename": "Space_Race",
+    "summary": "A 20th-century competition between two Cold War rivals, the Soviet Union and the United States, to achieve firsts in spaceflight capability.",
+    "tags": ["history", "space", "science"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "031",
+    "title": "Apollo 11",
+    "filename": "Apollo_11",
+    "summary": "The spaceflight that first landed humans on the Moon.",
+    "tags": ["history", "space", "science"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "032",
+    "title": "Moon",
+    "filename": "Moon",
+    "summary": "Earth's only natural satellite.",
+    "tags": ["space", "astronomy", "nature"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "033",
+    "title": "Civil Rights Movement",
+    "filename": "Civil_Rights_Movement",
+    "summary": "A political movement and campaign from 1954 to 1968 in the United States to abolish institutional racial segregation.",
+    "tags": ["history", "politics", "society"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "034",
+    "title": "September 11 Attacks",
+    "filename": "September_11_Attacks",
+    "summary": "Four coordinated terrorist attacks against the United States by al-Qaeda.",
+    "tags": ["history", "terrorism", "usa"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "035",
+    "title": "War on Terror",
+    "filename": "War_on_Terror",
+    "summary": "An international military campaign initiated by the United States following the September 11 attacks.",
+    "tags": ["history", "war", "politics"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "036",
+    "title": "Canada",
+    "filename": "Canada",
+    "summary": "A country in North America, sitting to the north of the United States.",
+    "tags": ["geography", "country", "north america"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "037",
+    "title": "Mexico",
+    "filename": "Mexico",
+    "summary": "A country in the southern portion of North America.",
+    "tags": ["geography", "country", "north america"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "038",
+    "title": "Rocky Mountains",
+    "filename": "Rocky_Mountains",
+    "summary": "A major mountain range in western North America.",
+    "tags": ["geography", "nature", "mountains"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "039",
+    "title": "Hawaii",
+    "filename": "Hawaii",
+    "summary": "A state of the United States located in the Pacific Ocean.",
+    "tags": ["geography", "state", "island"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "040",
+    "title": "Alaska",
+    "filename": "Alaska",
+    "summary": "A U.S. state on the northwest extremity of North America.",
+    "tags": ["geography", "state", "arctic"],
+    "date": "2026-02-09"
+  },
+  {
+    "id": "041",
+    "title": "Silicon Valley",
+    "filename": "Silicon_Valley",
+    "summary": "A region in Northern California that serves as a global center for high technology and innovation.",
+    "tags": ["geography", "technology", "economy"],
+    "date": "2026-02-09"
   }
 ]
