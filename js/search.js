@@ -1,14 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('wiki-search');
     const resultsContainer = document.getElementById('search-results');
+    
+    // Adjust path based on current location
+    const jsonPath = window.location.pathname.includes('/article/') 
+        ? '../json/articles.json' 
+        : 'json/articles.json';
+
     let articles = [];
 
-    fetchArticles().then(data => {
-        articles = data;
-    });
+    // Fetch Data
+    fetch(jsonPath)
+        .then(response => response.json())
+        .then(data => { articles = data; })
+        .catch(err => console.error("Search index failed to load", err));
 
+    // Input Handler
     searchInput.addEventListener('input', (e) => {
-        const query = e.target.value.toLowerCase();
+        const query = e.target.value.toLowerCase().trim();
         resultsContainer.innerHTML = '';
         
         if (query.length < 2) {
@@ -24,23 +33,28 @@ document.addEventListener('DOMContentLoaded', () => {
         if (filtered.length > 0) {
             filtered.forEach(article => {
                 const link = document.createElement('a');
-                link.href = `${WIKI_CONFIG.articleRoot}${article.filename}.html`;
+                // Adjust link path based on location
+                const prefix = window.location.pathname.includes('/article/') ? '' : 'article/';
+                link.href = `${prefix}${article.filename}.html`;
                 link.className = 'search-result-item';
-                link.textContent = article.title;
+                link.innerHTML = `
+                    ${article.title}
+                    <small>${article.summary.substring(0, 60)}...</small>
+                `;
                 resultsContainer.appendChild(link);
             });
-            resultsContainer.style.display = 'block';
         } else {
             const noResult = document.createElement('div');
             noResult.className = 'search-result-item';
             noResult.style.color = 'var(--text-muted)';
-            noResult.textContent = 'No matching pages';
+            noResult.textContent = 'No matching pages found.';
             noResult.style.cursor = 'default';
             resultsContainer.appendChild(noResult);
-            resultsContainer.style.display = 'block';
         }
+        resultsContainer.style.display = 'block';
     });
 
+    // Close on click outside
     document.addEventListener('click', (e) => {
         if (!searchInput.contains(e.target) && !resultsContainer.contains(e.target)) {
             resultsContainer.style.display = 'none';
