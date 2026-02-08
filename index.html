@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki // Home</title>
+    <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+    <div class="layout-wrapper">
+        <header>
+            <div class="header-inner">
+                <a href="index.html" class="site-title">RHALZA // WIKI</a>
+                
+                <div class="search-container">
+                    <input type="text" id="wiki-search" placeholder="Search knowledge base..." autocomplete="off">
+                    <div id="search-results"></div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero-section">
+                <h1 class="hero-title">Personal Knowledge Base</h1>
+                <p class="hero-subtitle">Documentation, snippets, and archival data.</p>
+            </section>
+
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-label">Total Articles</span>
+                    <span class="stat-value" id="stat-total-articles">-</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Last Updated</span>
+                    <span class="stat-value" id="stat-last-update">-</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Status</span>
+                    <span class="stat-value" style="color: var(--link-color)">Online</span>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
