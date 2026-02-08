@@ -1,0 +1,62 @@
+/* Specific styling for United States Article */
+
+.usa-quote {
+    background-color: var(--bg-surface);
+    border-left: 4px solid var(--accent-primary);
+    padding: 1rem 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: var(--text-muted);
+    font-family: var(--font-heading);
+}
+
+.usa-timeline {
+    border-left: 2px solid var(--border-main);
+    margin-left: 1rem;
+    padding-left: 2rem;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.timeline-event {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.timeline-event::before {
+    content: "";
+    position: absolute;
+    left: -2.45rem;
+    top: 0.25rem;
+    width: 12px;
+    height: 12px;
+    background-color: var(--accent-primary);
+    border-radius: 50%;
+    border: 2px solid var(--bg-body);
+}
+
+.timeline-date {
+    font-weight: 700;
+    color: var(--accent-hover);
+    margin-bottom: 0.25rem;
+    display: block;
+    font-family: var(--font-ui);
+}
+
+.stat-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.95rem;
+}
+
+.stat-table th, .stat-table td {
+    border: 1px solid var(--border-main);
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.stat-table th {
+    background-color: var(--bg-highlight);
+    color: var(--text-main);
+}
