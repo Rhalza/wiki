@@ -3,42 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wiki // Home</title>
+    <title>Wiki // Main Page</title>
     <link rel="stylesheet" href="css/common.css">
 </head>
 <body>
     <div class="layout-wrapper">
         <header>
             <div class="header-inner">
-                <a href="index.html" class="site-title">RHALZA // WIKI</a>
+                <a href="index.html" class="site-logo">
+                    <img src="media/images/site/logo1.png" alt="RHALZA Wiki">
+                </a>
                 
-                <div class="search-container">
-                    <input type="text" id="wiki-search" placeholder="Search knowledge base..." autocomplete="off">
+                <div class="search-wrapper">
+                    <input type="text" id="wiki-search" placeholder="Search the wiki..." autocomplete="off">
                     <div id="search-results"></div>
                 </div>
             </div>
         </header>
 
         <main>
-            <section class="hero-section">
-                <h1 class="hero-title">Personal Knowledge Base</h1>
-                <p class="hero-subtitle">Documentation, snippets, and archival data.</p>
-            </section>
+            <div class="wiki-grid">
+                
+                <div class="content-panel">
+                    <div class="panel-header">
+                        <h2>Encyclopedia Home</h2>
+                    </div>
+                    <div class="panel-body">
+                        <h1 class="welcome-title">Welcome to the Archives</h1>
+                        <p class="welcome-text">
+                            This is the central repository for documentation, project archives, and personal knowledge management. 
+                            The database is structured to provide persistent access to technical articles, configuration references, and development logs.
+                        </p>
+                        <p style="color: var(--text-muted); font-size: 0.95rem;">
+                            Use the search bar above to navigate specific topics or browse the index below.
+                        </p>
+                    </div>
+                </div>
 
-            <section class="stats-grid">
-                <div class="stat-card">
-                    <span class="stat-label">Total Articles</span>
-                    <span class="stat-value" id="stat-total-articles">-</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-label">Last Updated</span>
-                    <span class="stat-value" id="stat-last-update">-</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-label">Status</span>
-                    <span class="stat-value" style="color: var(--link-color)">Online</span>
-                </div>
-            </section>
+                <aside class="sidebar-area">
+                    <div class="sidebar-card">
+                        <div class="sidebar-header">
+                            <h3>Wiki Statistics</h3>
+                        </div>
+                        <div class="sidebar-content">
+                            <div class="stat-row">
+                                <span class="stat-label">Articles</span>
+                                <span class="stat-value" id="stat-total-articles">--</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">Last Updated</span>
+                                <span class="stat-value" id="stat-last-update">--</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">System</span>
+                                <span class="stat-value" style="color: var(--accent-primary);">Active</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <div class="sidebar-header">
+                            <h3>Quick Actions</h3>
+                        </div>
+                        <div class="sidebar-content">
+                            <a href="#" style="display: block; padding: 0.25rem 0;">View All Pages</a>
+                            <a href="#" style="display: block; padding: 0.25rem 0;">Random Article</a>
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
         </main>
     </div>
 
