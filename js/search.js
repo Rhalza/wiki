@@ -34,7 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const noResult = document.createElement('div');
             noResult.className = 'search-result-item';
             noResult.style.color = 'var(--text-muted)';
-            noResult.textContent = 'No results found';
+            noResult.textContent = 'No matching pages';
+            noResult.style.cursor = 'default';
             resultsContainer.appendChild(noResult);
             resultsContainer.style.display = 'block';
         }
