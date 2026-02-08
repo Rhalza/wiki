@@ -5,77 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orion // Home</title>
     <link rel="stylesheet" href="css/common.css">
-    <!-- Home specific styles can live inline or in css/home.css -->
-    <style>
-        .portal-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-        .portal-card {
-            background-color: var(--bg-surface);
-            border: 1px solid var(--border-main);
-            padding: 1.5rem;
-            border-top: 3px solid var(--accent-primary);
-        }
-        .portal-card h3 { margin-bottom: 0.5rem; color: var(--text-main); }
-        .portal-card p { color: var(--text-muted); font-size: 0.9rem; }
-    </style>
 </head>
 <body>
-    <div class="layout-wrapper">
-        <header>
-            <div class="header-inner">
-                <a href="index.html" class="site-logo">
-                    <!-- Adjusted path for root -->
-                    <img src="media/images/site/logo1.png" alt="Orion Wiki">
-                </a>
-                
-                <div class="search-wrapper">
-                    <input type="text" id="wiki-search" placeholder="Search Orion..." autocomplete="off">
-                    <div id="search-results"></div>
-                </div>
-            </div>
-        </header>
-
-        <main>
-            <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem; font-family: var(--font-heading);">Welcome to Orion</h1>
-            <p style="font-size: 1.1rem; color: var(--text-muted); max-width: 800px;">
-                A general knowledge repository curated by Rhalza. This project serves as a structured archive for diverse topics, ranging from technical documentation to personal interests and archival data.
-            </p>
-
-            <div class="portal-grid">
-                <div class="portal-card">
-                    <h3>About the Wiki</h3>
-                    <p>Learn about the structure, the author, and the purpose behind the Orion project.</p>
-                    <a href="article/Orion_(Wiki).html" style="display:block; margin-top:1rem;">Read More &rarr;</a>
-                </div>
-                <div class="portal-card">
-                    <h3>Recent Additions</h3>
-                    <p>Browse the latest articles added to the database.</p>
-                    <ul id="recent-list" style="margin-top:1rem; padding-left:1.2rem; color:var(--text-muted); font-size:0.9rem;">
-                        <!-- JS can populate this later -->
-                        <li><a href="article/Orion_(Wiki).html">Orion (Wiki)</a></li>
-                    </ul>
-                </div>
-            </div>
-        </main>
-
-        <!-- Floating Action Button -->
-        <div class="fab-container">
-            <div class="fab-menu">
-                <div class="fab-item" id="mail-correction">Correction</div>
-                <div class="fab-item" id="mail-suggestion">Suggestion</div>
-                <div class="fab-item" id="mail-submission">Submission</div>
-            </div>
-            <div class="fab-main" title="Contact / Contribute">
-                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+    <header>
+        <div class="header-inner">
+            <a href="index.html" class="site-logo">
+                <img src="media/images/site/logo1.png" alt="Orion">
+            </a>
+            
+            <div class="search-wrapper">
+                <input type="text" id="wiki-search" placeholder="Search Orion..." autocomplete="off">
+                <div id="search-results"></div>
             </div>
         </div>
+    </header>
+
+    <div class="layout-wrapper" style="max-width: 1200px; margin: 0 auto; width: 100%; padding: 2rem 1rem;">
+        <main style="display: grid; grid-template-columns: 1fr 320px; gap: 2rem;">
+            <div class="content-column">
+                <h1 style="font-family: var(--font-heading); font-size: 2.5rem; margin-bottom: 1rem;">Welcome to Orion</h1>
+                <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">
+                    The Orion Wiki is a curated general knowledge encyclopedia established on February 8, 2026. 
+                    Unlike traditional technical documentations, Orion serves as a repository for broad information, 
+                    concepts, and archival data maintained by Rhalza.
+                </p>
+
+                <h2 style="font-family: var(--font-heading); border-bottom: 1px solid var(--border-main); padding-bottom: 0.5rem; margin-bottom: 1rem;">Featured Article</h2>
+                <div style="background-color: var(--bg-surface); padding: 1.5rem; border: 1px solid var(--border-main); border-radius: 4px;">
+                    <h3 style="margin-bottom: 0.5rem;"><a href="article/Orion_(Wiki).html" style="font-size: 1.25rem;">Orion (Wiki)</a></h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1rem;">
+                        Orion is a personal encyclopedia project founded by Rhalza. It serves as a centralized platform for creating and storing articles on a wide variety of subjects...
+                    </p>
+                    <a href="article/Orion_(Wiki).html">Read More &rarr;</a>
+                </div>
+            </div>
+
+            <aside>
+                <div style="background-color: var(--bg-surface); border: 1px solid var(--border-main); border-radius: 4px; overflow: hidden;">
+                    <div style="background-color: var(--accent-surface); padding: 0.75rem 1rem; font-weight: 600;">
+                        Wiki Statistics
+                    </div>
+                    <div style="padding: 1rem;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                            <span style="color: var(--text-muted);">Founded</span>
+                            <span>Feb 8, 2026</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                            <span style="color: var(--text-muted);">Articles</span>
+                            <span id="stat-total-articles">Loading...</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between;">
+                            <span style="color: var(--text-muted);">Administrator</span>
+                            <a href="#">Rhalza</a>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <div class="fab-container">
+        <div id="fab-menu" class="fab-menu">
+            <button id="opt-correct" class="fab-item">Correction</button>
+            <button id="opt-suggest" class="fab-item">Suggestion</button>
+            <button id="opt-submit" class="fab-item">Submission</button>
+        </div>
+        <button id="fab-main" class="fab-button">
+            <span id="fab-icon">✉</span>
+        </button>
     </div>
 
     <script src="js/common.js"></script>
     <script src="js/search.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
