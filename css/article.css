@@ -1,82 +1,91 @@
-/* --- Article Layout --- */
 .article-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2rem 1rem;
     display: grid;
-    grid-template-columns: 1fr 300px; /* Content | Infobox Sidebar */
+    grid-template-columns: 1fr;
     gap: 2rem;
-    align-items: start;
 }
 
-.article-content {
-    min-width: 0; /* Prevents grid blowout */
+.article-header {
+    border-bottom: 1px solid var(--border-main);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
 }
 
-/* Typography */
 .article-title {
     font-family: var(--font-heading);
-    font-size: 2.25rem;
-    border-bottom: 1px solid var(--border-main);
-    padding-bottom: 0.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--text-main);
 }
 
 .article-meta {
     font-size: 0.85rem;
     color: var(--text-muted);
-    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
 }
 
-.article-content h2 {
-    font-size: 1.5rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid var(--border-light);
-    padding-bottom: 0.25rem;
-}
-
-.article-content h3 {
-    font-size: 1.2rem;
-    margin-top: 1.5rem;
-    margin-bottom: 0.75rem;
-    color: var(--text-main);
-}
-
-.article-content p {
-    margin-bottom: 1rem;
-    font-family: var(--font-heading);
-    font-weight: 300;
+.article-body {
+    font-size: 1.05rem;
     line-height: 1.7;
+    position: relative;
 }
 
-/* --- Infobox (Wikipedia Style) --- */
+.article-body p {
+    margin-bottom: 1.25rem;
+}
+
+.article-body h2 {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    border-bottom: 1px solid var(--border-main);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.25rem;
+    font-weight: 400;
+}
+
+.article-body ul, .article-body ol {
+    margin-bottom: 1.25rem;
+    padding-left: 1.5rem;
+}
+
+.article-body li {
+    margin-bottom: 0.5rem;
+}
+
 .infobox {
+    width: 300px;
+    float: right;
+    clear: right;
+    margin: 0 0 1.5rem 1.5rem;
     background-color: var(--bg-surface);
     border: 1px solid var(--border-main);
-    padding: 0;
+    border-radius: 4px;
     font-size: 0.9rem;
-    border-radius: 2px;
-    width: 100%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .infobox-header {
     background-color: var(--accent-surface);
-    color: var(--text-main);
     padding: 0.75rem;
     text-align: center;
-    font-weight: 600;
+    font-weight: 700;
     font-family: var(--font-heading);
     border-bottom: 1px solid var(--border-main);
 }
 
 .infobox-image {
     padding: 0.5rem;
-    background-color: #00000040;
     text-align: center;
+    border-bottom: 1px solid var(--border-main);
 }
 
 .infobox-image img {
     max-width: 100%;
     height: auto;
-    border: 1px solid var(--border-main);
+    border-radius: 2px;
 }
 
 .infobox-row {
@@ -84,76 +93,27 @@
     border-bottom: 1px solid var(--border-main);
 }
 
-.infobox-row:last-child { border-bottom: none; }
+.infobox-row:last-child {
+    border-bottom: none;
+}
 
 .infobox-label {
     width: 40%;
     padding: 0.5rem 0.75rem;
-    background-color: #1a1e29;
+    font-weight: 600;
     color: var(--text-muted);
-    font-weight: 500;
     border-right: 1px solid var(--border-main);
 }
 
 .infobox-data {
     width: 60%;
     padding: 0.5rem 0.75rem;
-    color: var(--text-main);
 }
 
-/* --- Wiki Tables --- */
-.wikitable {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1rem 0;
-    background-color: var(--bg-surface);
-    border: 1px solid var(--border-main);
-    font-size: 0.95rem;
-}
-
-.wikitable th {
-    background-color: var(--bg-highlight);
-    border: 1px solid var(--border-main);
-    padding: 0.5rem;
-    text-align: left;
-}
-
-.wikitable td {
-    border: 1px solid var(--border-main);
-    padding: 0.5rem;
-}
-
-/* --- Media / Images --- */
-figure.thumb {
-    border: 1px solid var(--border-main);
-    background-color: var(--bg-surface);
-    padding: 0.25rem;
-    margin: 0 0 1rem 1rem;
-    float: right;
-    max-width: 300px;
-}
-
-figure.thumb.tleft { float: left; margin: 0 1rem 1rem 0; }
-
-figure.thumb img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-figure.thumb figcaption {
-    padding: 0.5rem;
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    line-height: 1.4;
-}
-
-@media (max-width: 900px) {
-    .article-container {
-        grid-template-columns: 1fr;
-    }
+@media (max-width: 850px) {
     .infobox {
-        max-width: 400px;
-        margin: 0 auto 2rem auto;
+        float: none;
+        width: 100%;
+        margin: 0 0 2rem 0;
     }
 }
