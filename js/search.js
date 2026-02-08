@@ -1,23 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('wiki-search');
     const resultsContainer = document.getElementById('search-results');
-    
-    // Adjust path based on current location
-    const jsonPath = window.location.pathname.includes('/article/') 
-        ? '../json/articles.json' 
-        : 'json/articles.json';
-
     let articles = [];
 
-    // Fetch Data
-    fetch(jsonPath)
-        .then(response => response.json())
-        .then(data => { articles = data; })
-        .catch(err => console.error("Search index failed to load", err));
+    fetchArticles().then(data => {
+        articles = data;
+    });
 
-    // Input Handler
     searchInput.addEventListener('input', (e) => {
-        const query = e.target.value.toLowerCase().trim();
+        const query = e.target.value.toLowerCase();
         resultsContainer.innerHTML = '';
         
         if (query.length < 2) {
@@ -33,28 +24,33 @@ document.addEventListener('DOMContentLoaded', () => {
         if (filtered.length > 0) {
             filtered.forEach(article => {
                 const link = document.createElement('a');
-                // Adjust link path based on location
-                const prefix = window.location.pathname.includes('/article/') ? '' : 'article/';
-                link.href = `${prefix}${article.filename}.html`;
+                link.href = `${WIKI_CONFIG.articleRoot}${article.filename}.html`;
                 link.className = 'search-result-item';
-                link.innerHTML = `
-                    ${article.title}
-                    <small>${article.summary.substring(0, 60)}...</small>
-                `;
+                
+                const titleSpan = document.createElement('div');
+                titleSpan.style.fontWeight = '500';
+                titleSpan.textContent = article.title;
+                
+                const metaSpan = document.createElement('div');
+                metaSpan.style.fontSize = '0.8rem';
+                metaSpan.style.color = '#94a3b8';
+                metaSpan.textContent = article.summary.substring(0, 60) + '...';
+
+                link.appendChild(titleSpan);
+                link.appendChild(metaSpan);
                 resultsContainer.appendChild(link);
             });
+            resultsContainer.style.display = 'block';
         } else {
             const noResult = document.createElement('div');
             noResult.className = 'search-result-item';
-            noResult.style.color = 'var(--text-muted)';
+            noResult.style.color = '#94a3b8';
             noResult.textContent = 'No matching pages found.';
-            noResult.style.cursor = 'default';
             resultsContainer.appendChild(noResult);
+            resultsContainer.style.display = 'block';
         }
-        resultsContainer.style.display = 'block';
     });
 
-    // Close on click outside
     document.addEventListener('click', (e) => {
         if (!searchInput.contains(e.target) && !resultsContainer.contains(e.target)) {
             resultsContainer.style.display = 'none';
