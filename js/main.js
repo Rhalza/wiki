@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     fetchArticles().then(articles => {
         if (totalArticlesEl) {
-            totalArticlesEl.textContent = articles.length;
+            totalArticlesEl.textContent = articles.length.toLocaleString();
         }
 
         if (lastUpdateEl && articles.length > 0) {
