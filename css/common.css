@@ -1,0 +1,202 @@
+:root {
+    --bg-body: #0f1115;
+    --bg-surface: #161920;
+    --bg-header: #161920e6;
+    --border-color: #2a303c;
+    --text-main: #e0e6ed;
+    --text-muted: #94a3b8;
+    --accent-primary: #64748b;
+    --accent-hover: #94a3b8;
+    --accent-focus: #38bdf8;
+    --link-color: #7dd3fc;
+    --font-main: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --max-width: 1200px;
+    --header-height: 60px;
+    --radius: 2px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.layout-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: var(--header-height);
+    background-color: var(--bg-header);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border-color);
+    width: 100%;
+}
+
+.header-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-title {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--text-main);
+    letter-spacing: -0.025em;
+    text-decoration: none;
+}
+
+.site-title:hover {
+    text-decoration: none;
+    color: var(--accent-focus);
+}
+
+.search-container {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+}
+
+#wiki-search {
+    width: 100%;
+    background-color: var(--bg-body);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    font-size: 0.9rem;
+    transition: border-color 0.2s ease;
+}
+
+#wiki-search:focus {
+    outline: none;
+    border-color: var(--accent-focus);
+}
+
+#search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-top: none;
+    max-height: 300px;
+    overflow-y: auto;
+    display: none;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+}
+
+.search-result-item {
+    display: block;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-muted);
+}
+
+.search-result-item:hover {
+    background-color: var(--bg-body);
+    color: var(--accent-focus);
+    text-decoration: none;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--spacing-lg) var(--spacing-md);
+}
+
+.hero-section {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius);
+    margin-bottom: var(--spacing-lg);
+}
+
+.hero-title {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-main);
+}
+
+.hero-subtitle {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.stat-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    padding: var(--spacing-md);
+    border-radius: var(--radius);
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+@media (max-width: 768px) {
+    .header-inner {
+        gap: var(--spacing-md);
+    }
+    
+    .site-title {
+        display: none;
+    }
+    
+    .search-container {
+        max-width: 1
